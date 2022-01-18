@@ -1,0 +1,68 @@
+.container{
+ text-align: center;
+}
+
+.title{
+    padding: 0;
+    margin: 0;
+    font-size: 7.7vw;
+    font-weight:lighter;
+    position: relative;
+}
+
+.subtitleContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.bfBoxContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+}
+
+.blackbox{
+    min-width: 25vw;
+    min-height: 62%;
+    background-color: rgb(255, 254, 254);
+    position: absolute;
+    top: 0;
+    right: 25.5vw;
+    opacity: 75%;
+}
+.whitebox{
+    min-width: 25vw;
+    min-height: 62%;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    bottom: 0;
+    left: 24.5vw;
+    opacity: 75%;
+}
+
+
+
+
+.subtitle{
+    padding: 0;
+    margin: 0;
+    font-size: 1.5vw;
+    font-weight: lighter;
+    position: relative;
+}
+
+
+.breaker{
+   outline: none;
+   background: none;
+   border: 2.5px solid white;
+   border-radius: 10px;
+   padding: 0;
+   margin: 0;
+   min-width: 100%;
+   position: relative;
+}
