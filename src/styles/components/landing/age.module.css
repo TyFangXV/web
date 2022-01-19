@@ -1,0 +1,35 @@
+.container{
+    padding: 0;
+    margin: 0;
+
+}
+
+.ageName{
+    padding: 0;
+    margin: 0;
+}
+
+
+.breaker{
+    outline: none;
+    width: 4vw;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    padding: 0;
+    margin: 0;
+}
+
+.name{
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-size: 2vw;
+}
+
+
+.age{
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-size: 2vw;
+}

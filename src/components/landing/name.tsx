@@ -1,5 +1,16 @@
 import React from "react";
 import styles from '../../styles/components/landing/name.module.css'
+import ageStyles from '../../styles/components/landing/age.module.css'
+
+export const Age = () => {
+    return (
+        <div className={ageStyles.container}>
+                <p className={ageStyles.name}>DREX</p>
+                <hr className={ageStyles.breaker}/>
+                <p className={ageStyles.age}>16</p>
+        </div>
+    )
+}
 
 const Name = () => {
     return (

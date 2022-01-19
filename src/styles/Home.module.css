@@ -4,9 +4,33 @@
 
 }
 
+.menu_btn{
+  color: white;
+  font-size: 2.5vw;
+  cursor: pointer;
+}
+
 .middle{
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+}
+
+.left{
+  position: absolute;
+  left: 3;
+}
+
+
+.bottomRight{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.topRight{
+  position: absolute;
+  right: 0;
+  top: 0;
 }
