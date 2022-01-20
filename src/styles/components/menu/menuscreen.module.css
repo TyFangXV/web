@@ -1,0 +1,17 @@
+.container {
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: #141414;
+}
+
+.topRight {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.menu_btn {
+  color: white;
+  font-size: 2.5vw;
+  cursor: pointer;
+}

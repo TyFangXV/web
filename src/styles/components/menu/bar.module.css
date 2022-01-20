@@ -1,0 +1,34 @@
+.right_vertical_bar_container{
+ margin-left: 10%;
+ max-width: 8vw;
+ height: 100%;
+}
+
+.right_vertical_bar{
+    min-height: 75vh;
+    max-width: 8vw;
+    background-image: url("/store.jpg");
+    background-size: 100vh;
+    padding: 0;
+    margin: 0;
+    /*clip bothtop and bottom*/
+    /*clip only top*/
+    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 calc(100% - 5vw));
+}
+
+.right_vertical_bar_black_screen{
+    min-height: 75vh;
+    max-width: 8vw;
+    padding: 0;
+    margin: 0;
+    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 calc(100% - 5vw));
+    background-color: black;
+    opacity: 0.5;  
+}
+
+
+.title{
+    padding: 0;
+    margin: 0;
+}
+
