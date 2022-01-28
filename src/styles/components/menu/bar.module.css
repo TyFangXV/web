@@ -1,11 +1,15 @@
+
+
 .title{
     margin: 0;
     padding: 0;
-    font-size: 2vw;
+    font-size: xx-large;
+    max-width:1px;
     min-width:1px;
     word-wrap: break-word;
     color: white;
     text-align: center;
+    text-transform: uppercase;
 }   
 
 
@@ -13,65 +17,50 @@
 
 .icon{
     color: white;
-    position: absolute;
-    top: 50vh;
-    left: 2.5vw ;
-    font-size: xx-large;
+    font-size: 2.5vw;
     padding: 0;
     margin: 0;
 }
 
 .right_vertical_bar{
     flex-shrink: 0;
-    min-height: 75vh;
-    min-width: 8vw;
-    background-image: url("/store.jpg");
-    background-size: 100vh;
+    min-height: var(--bar-height);
+    min-width: var(--bar-width);
+    background-size: cover;
     padding: 0;
-    margin: 0 10vw  0 10vw;
-    /*clip bothtop and bottom*/
-    /*clip only top*/
+    margin: 0 0  0 2.5vw;
     position: relative;
-    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 calc(100% - 5vw));
+
 }
 
 .right_vertical_bar_black_screen{
     flex-shrink: 0;
-    min-height: 75vh;
-    min-width: 8vw;
+    min-height: var(--bar-height);
+    min-width: var(--bar-width);
     padding: 0;
     margin: 0;
-    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 calc(100% - 5vw));
-    background-color: black;
-    opacity: 0.5;  
+    background-color: rgba(0, 0, 0, 0.500);  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 
 
-.left_vertical_bar{
-
-    flex-shrink: 0;
-    min-height: 75vh;
-    min-width: 8vw;
-    background-image: url("/contact.jpg");
-    background-size: cover;
-    padding: 0;
-    margin: 0 0 0 0;
-    /*clip bothtop and bottom*/
-    /*clip only top*/
-    clip-path: polygon(0 1%, 100% 10%, 100% calc(100% - 5vw), 0% 100%);
+.alignUp{
+    position: absolute;
+    top: 15vh;
 }
 
-.left_vertical_bar_black_screen{
-    flex-shrink: 0;
-    min-height: 75vh;
-    min-width: 8vw;
-    padding: 0;
-    margin: 0;
-    clip-path: polygon(0 1%, 100% 10%, 100% calc(100% - 5vw), 0% 100%);
-    background-color: black;
-    opacity: 0.5;  
+.alignBottom{
+    position: absolute;
+    bottom: 15vh;
 }
+
+
+
 
 
 .title{
