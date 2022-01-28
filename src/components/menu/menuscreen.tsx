@@ -8,6 +8,8 @@ import { useRecoilState } from 'recoil';
 import { VerticalBar } from './bars';
 import { IoLogoAppleAppstore } from 'react-icons/io5';
 import { MdLocalPhone}  from 'react-icons/md'
+import {FaMap} from 'react-icons/fa'
+import {BsPersonCircle, BsLightbulbFill} from 'react-icons/bs'
 
 const MenuScreen = () => {
   const [menuOpen, setMenuOpen] = useRecoilState(isMenuOpen);
@@ -59,14 +61,38 @@ const MenuScreen = () => {
         </VerticalBar>
 
 
-        <VerticalBar clip_path={'polygon(0% 0%,100% 0, 100% calc(100% - 5vw), 0  calc(100% - 5vw))'} background_image={'url("/about-us.jpg")'}>
+        <VerticalBar clip_path={'polygon(0% 0%, 100% 0%, 100% 85%, 50% 100%, 0 84%)'} background_image={'url("/about-us.jpg")'}>
           <span className={Barstyles.alignUp}>    
-            <p className={Barstyles.title}>contact</p>
+            <p className={Barstyles.title}>About<span>&shy;</span>Me</p>
           </span>
           <span className={Barstyles.alignBottom}>
-            <MdLocalPhone className={Barstyles.icon} />
+            <BsPersonCircle className={Barstyles.icon} />
           </span>
         </VerticalBar>
+
+
+        <VerticalBar clip_path={'polygon(0 0, 100% 10%, 100% 100%, 0 calc(100% - 5vw))'} background_image={'url("/road-map.jpg")'}>
+          <span className={Barstyles.alignUp}>  
+            <p className={Barstyles.title}>Road<span>&shy;</span>Map</p>
+          </span>
+          <span className={Barstyles.alignBottom}>
+            <FaMap className={Barstyles.icon} />
+          </span>
+        </VerticalBar>
+
+
+      <span>
+          <VerticalBar clip_path={'polygon(0% 10%,100% 0, 100% calc(100% - 5vw), 0  100%)'} background_image={'url("/project.jpg")'}>
+            <span className={Barstyles.alignUp}>    
+              <p className={Barstyles.title}>Project</p>
+            </span>
+            <span className={Barstyles.alignBottom}>
+              <BsLightbulbFill className={Barstyles.icon} />
+            </span>
+          </VerticalBar>        
+      </span>
+
+
       </div>
     </motion.div>
   );
