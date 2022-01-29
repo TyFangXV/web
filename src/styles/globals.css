@@ -1,4 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Anaheim&display=swap');
+:root{
+  --bar-height : 82vh;
+  --bar-width : 9vw;
+} 
+
+
+[hidden] {
+  display: none !important;
+}
+
+p,h1{
+  padding: 0;
+  margin: 0;
+}
 
 html,
 body {
@@ -11,6 +25,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
   font-family: var(--primary-font);
+
 }
 
 a {
