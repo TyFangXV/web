@@ -70,18 +70,18 @@ const MenuScreen = () => {
           </span>
         </VerticalBar>
 
+      <span className={styles.alignDown}>
+          <VerticalBar clip_path={'polygon(0 0, 100% 10%, 100% 100%, 0 calc(100% - 5vw))'} background_image={'url("/road-map.jpg")'}>
+            <span className={Barstyles.alignUp}>  
+              <p className={Barstyles.title}>Road<span>&shy;</span>Map</p>
+            </span>
+            <span className={Barstyles.alignBottom}>
+              <FaMap className={Barstyles.icon} />
+            </span>
+          </VerticalBar>        
+      </span>
 
-        <VerticalBar clip_path={'polygon(0 0, 100% 10%, 100% 100%, 0 calc(100% - 5vw))'} background_image={'url("/road-map.jpg")'}>
-          <span className={Barstyles.alignUp}>  
-            <p className={Barstyles.title}>Road<span>&shy;</span>Map</p>
-          </span>
-          <span className={Barstyles.alignBottom}>
-            <FaMap className={Barstyles.icon} />
-          </span>
-        </VerticalBar>
-
-
-      <span>
+      <span className={styles.alignUp}>
           <VerticalBar clip_path={'polygon(0% 10%,100% 0, 100% calc(100% - 5vw), 0  100%)'} background_image={'url("/project.jpg")'}>
             <span className={Barstyles.alignUp}>    
               <p className={Barstyles.title}>Project</p>

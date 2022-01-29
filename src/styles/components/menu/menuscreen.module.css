@@ -19,10 +19,12 @@
 }
 
 
+
 .menu_btn_container{
   display:flex;
   justify-content: center;
-  align-items: center;
   padding-top: 5vh;
 }
+
+
 

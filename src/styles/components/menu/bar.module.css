@@ -24,6 +24,7 @@
 }
 
 .right_vertical_bar{
+    cursor: pointer;
     flex-shrink: 0;
     min-height: var(--bar-height);
     min-width: var(--bar-width);
