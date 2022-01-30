@@ -40,7 +40,7 @@ const MenuScreen = () => {
       </span>
       <div className={styles.menu_btn_container}>
 
-        <VerticalBar clip_path={'polygon(0 0, 100% 10%, 100% 100%, 0 calc(100% - 5vw))'} background_image={'url("/store.jpg")'}>
+        <VerticalBar clip_path={'polygon(0 0, 100% 10%, 100% 100%, 0 calc(100% - 5vw))'} background_image={'url("/store.svg")'}>
           <span className={Barstyles.alignUp}>  
             <p className={Barstyles.title}>store</p>
           </span>
@@ -51,7 +51,7 @@ const MenuScreen = () => {
 
 
 
-        <VerticalBar clip_path={'polygon(0% 10%,100% 0, 100% calc(100% - 5vw), 0  100%)'} background_image={'url("/contact.jpg")'}>
+        <VerticalBar clip_path={'polygon(0% 10%,100% 0, 100% calc(100% - 5vw), 0  100%)'} background_image={'url("/contact.svg")'}>
           <span className={Barstyles.alignUp}>    
             <p className={Barstyles.title}>contact</p>
           </span>
@@ -61,7 +61,7 @@ const MenuScreen = () => {
         </VerticalBar>
 
 
-        <VerticalBar clip_path={'polygon(0% 0%, 100% 0%, 100% 85%, 50% 100%, 0 84%)'} background_image={'url("/about-us.jpg")'}>
+        <VerticalBar clip_path={'polygon(0% 0%, 100% 0%, 100% 85%, 50% 100%, 0 84%)'} background_image={'url("/about-us.svg")'}>
           <span className={Barstyles.alignUp}>    
             <p className={Barstyles.title}>About<span>&shy;</span>Me</p>
           </span>
@@ -71,7 +71,7 @@ const MenuScreen = () => {
         </VerticalBar>
 
       <span className={styles.alignDown}>
-          <VerticalBar clip_path={'polygon(0 0, 100% 10%, 100% 100%, 0 calc(100% - 5vw))'} background_image={'url("/road-map.jpg")'}>
+          <VerticalBar clip_path={'polygon(0 0, 100% 10%, 100% 100%, 0 calc(100% - 5vw))'} background_image={'url("/road-map.svg")'}>
             <span className={Barstyles.alignUp}>  
               <p className={Barstyles.title}>Road<span>&shy;</span>Map</p>
             </span>
@@ -82,7 +82,7 @@ const MenuScreen = () => {
       </span>
 
       <span className={styles.alignUp}>
-          <VerticalBar clip_path={'polygon(0% 10%,100% 0, 100% calc(100% - 5vw), 0  100%)'} background_image={'url("/project.jpg")'}>
+          <VerticalBar clip_path={'polygon(0% 10%,100% 0, 100% calc(100% - 5vw), 0  100%)'} background_image={'url("/project.svg")'}>
             <span className={Barstyles.alignUp}>    
               <p className={Barstyles.title}>Project</p>
             </span>

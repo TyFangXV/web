@@ -70,3 +70,10 @@
     margin: 0;
 }
 
+
+@media (max-width: 480px) {
+ .right_vertical_bar{
+    min-height: 25vh;
+    min-width: 25vw;
+ } 
+}

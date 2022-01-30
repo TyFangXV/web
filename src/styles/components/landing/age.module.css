@@ -33,3 +33,18 @@
     color: white;
     font-size: 2vw;
 }
+
+@media (max-width: 480px) {
+    .name{
+        font-size: 5vw;
+
+    }
+
+    .breaker{
+        width: 10vw;
+    }
+
+    .age{
+        font-size: 5vw;
+    }
+}

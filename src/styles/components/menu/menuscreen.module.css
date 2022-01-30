@@ -2,6 +2,7 @@
   min-width: 100vw;
   min-height: 100vh;
   background-color: #141414;
+  z-index: -1;
 }
 
 .topRight {
@@ -24,6 +25,18 @@
   display:flex;
   justify-content: center;
   padding-top: 5vh;
+}
+
+
+@media (max-width: 480px) {
+  .menu_btn {
+    font-size: 5.5vw;
+  }
+
+  .container{
+    min-height: 100vh;
+    min-width: 100vw;
+  }
 }
 
 

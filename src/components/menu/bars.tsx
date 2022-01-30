@@ -8,14 +8,25 @@ interface VerticalBarProps {
 }
 
 
-export const VerticalBar = ({clip_path, children, background_image}:VerticalBarProps) => {  
-  return (
-    <div className={styles.right_vertical_bar} style={{clipPath : clip_path, backgroundImage : background_image}}>
-      <div className={styles.right_vertical_bar_black_screen} style={{clipPath : clip_path}}>
-        {children}
+export const VerticalBar = ({clip_path, children, background_image}:VerticalBarProps) => { 
+  
+  if(window.innerWidth < 480){
+    return(
+      <div className={styles.right_vertical_bar}>
+       </div> 
+    )
+  }else{
+    return (
+      <div className={styles.right_vertical_bar} style={{clipPath : clip_path, backgroundImage : background_image}}>
+        <div className={styles.right_vertical_bar_black_screen} style={{clipPath : clip_path}}>
+          {children}
+        </div>
       </div>
-    </div>
-  );
+    );    
+  }
+
+   
+
 };
 
 

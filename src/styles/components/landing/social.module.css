@@ -1,8 +1,6 @@
 .container{
     margin: 0;
     padding: 0;
-    max-height: 10vh;
-    max-width: 5vw;
     text-align: center;
 }
 
@@ -18,4 +16,14 @@
 
 .container li:hover{
     opacity: 50%;
+}
+
+
+@media (max-width: 480px){
+    
+
+    .container li{
+        font-size: 3.5vw;
+    }
+  
 }
