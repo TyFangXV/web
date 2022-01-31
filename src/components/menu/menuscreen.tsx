@@ -27,7 +27,7 @@ const MenuScreen = () => {
     <motion.div
       className={styles.container}
       animate={startAnimationControls}
-      transition={{ duration: 10, ease: 'easeIn' }}
+      transition={{ duration: 3, ease: 'easeIn' }}
     >
       <span
         className={styles.topRight}
