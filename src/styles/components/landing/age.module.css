@@ -35,8 +35,13 @@
 }
 
 @media (max-width: 480px) {
+
+    .container{
+      margin: 1vh 0 0 5px;
+    }
+
     .name{
-        font-size: 5vw;
+        font-size: 6vw;
 
     }
 
@@ -45,6 +50,6 @@
     }
 
     .age{
-        font-size: 5vw;
+        font-size: 6vw;
     }
 }

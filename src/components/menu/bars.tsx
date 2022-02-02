@@ -12,7 +12,8 @@ export const VerticalBar = ({clip_path, children, background_image}:VerticalBarP
   
   if(window.innerWidth < 480){
     return(
-      <div className={styles.right_vertical_bar}>
+      <div className={styles.right_vertical_bar_mobile} style={{backgroundImage : background_image}}>
+          {children}
        </div> 
     )
   }else{

@@ -1,6 +1,6 @@
 import { atom } from "recoil";
 
 export const isMenuOpen = atom({
-    key: "isMenuOpen",
+    key: "isMenuOpenState",
     default: false,
 })

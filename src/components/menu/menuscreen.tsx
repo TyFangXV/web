@@ -11,6 +11,16 @@ import { MdLocalPhone}  from 'react-icons/md'
 import {FaMap} from 'react-icons/fa'
 import {BsPersonCircle, BsLightbulbFill} from 'react-icons/bs'
 
+const isMobile = () => {
+  if (window.innerWidth < 480) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+
+
 const MenuScreen = () => {
   const [menuOpen, setMenuOpen] = useRecoilState(isMenuOpen);
   const startAnimationControls = useAnimation();
@@ -41,12 +51,29 @@ const MenuScreen = () => {
       <div className={styles.menu_btn_container}>
 
         <VerticalBar clip_path={'polygon(0 0, 100% 10%, 100% 100%, 0 calc(100% - 5vw))'} background_image={'url("/store.svg")'}>
+          <>
+          {isMobile() ? (
+            <>
+              <div className={Barstyles.menu_btn_container_mobile_item}>
+                <div className={Barstyles.menu_btn_container_mobile_item_icon}>
+                  <IoLogoAppleAppstore className={Barstyles.icon}/>
+                </div>
+                <div className={styles.menu_btn_container_mobile_item_text}>
+                  <p>Store</p>
+                </div>
+              </div>           
+            </>
+          ) : (
+            <>
           <span className={Barstyles.alignUp}>  
             <p className={Barstyles.title}>store</p>
           </span>
           <span className={Barstyles.alignBottom}>
             <IoLogoAppleAppstore className={Barstyles.icon} />
           </span>
+          </>
+          )}
+          </>
         </VerticalBar>
 
 
