@@ -48,32 +48,15 @@ const MenuScreen = () => {
           onClick={() => setMenuOpen(!menuOpen)}
         />
       </span>
+      <div className={styles.menu_container}>
       <div className={styles.menu_btn_container}>
-
         <VerticalBar clip_path={'polygon(0 0, 100% 10%, 100% 100%, 0 calc(100% - 5vw))'} background_image={'url("/store.svg")'}>
-          <>
-          {isMobile() ? (
-            <>
-              <div className={Barstyles.menu_btn_container_mobile_item}>
-                <div className={Barstyles.menu_btn_container_mobile_item_icon}>
-                  <IoLogoAppleAppstore className={Barstyles.icon}/>
-                </div>
-                <div className={styles.menu_btn_container_mobile_item_text}>
-                  <p>Store</p>
-                </div>
-              </div>           
-            </>
-          ) : (
-            <>
           <span className={Barstyles.alignUp}>  
             <p className={Barstyles.title}>store</p>
           </span>
           <span className={Barstyles.alignBottom}>
             <IoLogoAppleAppstore className={Barstyles.icon} />
           </span>
-          </>
-          )}
-          </>
         </VerticalBar>
 
 
@@ -120,6 +103,7 @@ const MenuScreen = () => {
       </span>
 
 
+      </div>
       </div>
     </motion.div>
   );
