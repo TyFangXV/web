@@ -5,6 +5,52 @@
 
 }
 
+#hr{
+  
+}
+
+.list{
+    background-color: rgba(255, 255, 255, 0.5);
+    max-width: 65vw;
+    padding: 0 0 0 2vw;
+    border-radius: 10px;
+    border: 2.5px solid rgba(0, 0, 0, 0.25);
+}
+
+.list ul{
+  padding: 0;
+  margin: 0;
+}
+
+.list ul li{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: 1.65vw;
+    color: white;
+    margin: 1vw 0 1vw 0;
+}
+
+/* width */
+.bio::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  .bio::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.60);
+  }
+  
+  /* Handle */
+  .bio::-webkit-scrollbar-thumb {
+    background: rgb(255, 255, 255);
+  }
+  
+  /* Handle on hover */
+  .bio::-webkit-scrollbar-thumb:hover {
+    background: rgb(255, 255, 255);
+  }
+
 
 .box{
     min-width: 50vw;
@@ -26,10 +72,14 @@
     top: 5%;
     width: 70%;
     height: 85vh;
-    padding: 0;
+    padding: 0 0 2vw 0;
     margin: 0;
     border-radius: 10px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
 }
+
+
 
 
 .bio p{
@@ -39,8 +89,19 @@
     color: white;
 }
 
-.heading{
+
+
+.text{
+    font-size: 3vw;
+    margin: 0;
+    padding: 0;
     color: white;
+    text-decoration: underline;
+}
+
+
+.heading{
+    color: rgba(255, 255, 255, 0.75);
     font-size: 8vh;
     text-transform: uppercase;
     font-family: 'Alfa Slab One', cursive;
