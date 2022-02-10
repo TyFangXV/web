@@ -10,6 +10,8 @@ import { IoLogoAppleAppstore } from 'react-icons/io5';
 import { MdLocalPhone}  from 'react-icons/md'
 import {FaMap} from 'react-icons/fa'
 import {BsPersonCircle, BsLightbulbFill} from 'react-icons/bs'
+import { useRouter } from 'next/router';
+
 
 const isMobile = () => {
   if (window.innerWidth < 480) {
@@ -24,6 +26,7 @@ const isMobile = () => {
 const MenuScreen = () => {
   const [menuOpen, setMenuOpen] = useRecoilState(isMenuOpen);
   const startAnimationControls = useAnimation();
+  const router = useRouter();
 
   startAnimationControls.start({
     y: menuOpen ? 0 : '-100%',
@@ -50,7 +53,7 @@ const MenuScreen = () => {
       </span>
       <div className={styles.menu_container}>
       <div className={styles.menu_btn_container}>
-        <VerticalBar clip_path={'polygon(0 0, 100% 10%, 100% 100%, 0 calc(100% - 5vw))'} background_image={'url("/store.svg")'}>
+        <VerticalBar clip_path={'polygon(0 0, 100% 10%, 100% 100%, 0 calc(100% - 5vw))'} background_image={'url("/store.svg")'}  OnClick={()=> {router.push("/about")}}>
           <span className={Barstyles.alignUp}>  
             <p className={Barstyles.title}>store</p>
           </span>
@@ -61,7 +64,7 @@ const MenuScreen = () => {
 
 
 
-        <VerticalBar clip_path={'polygon(0% 10%,100% 0, 100% calc(100% - 5vw), 0  100%)'} background_image={'url("/contact.svg")'}>
+        <VerticalBar clip_path={'polygon(0% 10%,100% 0, 100% calc(100% - 5vw), 0  100%)'} background_image={'url("/contact.svg")'}  OnClick={()=> {router.push("/about")}}>
           <span className={Barstyles.alignUp}>    
             <p className={Barstyles.title}>contact</p>
           </span>
@@ -71,7 +74,7 @@ const MenuScreen = () => {
         </VerticalBar>
 
 
-        <VerticalBar clip_path={'polygon(0% 0%, 100% 0%, 100% 85%, 50% 100%, 0 84%)'} background_image={'url("/about-us.svg")'}>
+        <VerticalBar clip_path={'polygon(0% 0%, 100% 0%, 100% 85%, 50% 100%, 0 84%)'} background_image={'url("/about-us.svg")'} OnClick={()=> {router.push("/about")}}>
           <span className={Barstyles.alignUp}>    
             <p className={Barstyles.title}>About<span>&shy;</span>Me</p>
           </span>
@@ -81,7 +84,7 @@ const MenuScreen = () => {
         </VerticalBar>
 
       <span className={styles.alignDown}>
-          <VerticalBar clip_path={'polygon(0 0, 100% 10%, 100% 100%, 0 calc(100% - 5vw))'} background_image={'url("/road-map.svg")'}>
+          <VerticalBar clip_path={'polygon(0 0, 100% 10%, 100% 100%, 0 calc(100% - 5vw))'} background_image={'url("/road-map.svg")'}  OnClick={()=> {router.push("/about")}}>
             <span className={Barstyles.alignUp}>  
               <p className={Barstyles.title}>Road<span>&shy;</span>Map</p>
             </span>
@@ -92,7 +95,7 @@ const MenuScreen = () => {
       </span>
 
       <span className={styles.alignUp}>
-          <VerticalBar clip_path={'polygon(0% 10%,100% 0, 100% calc(100% - 5vw), 0  100%)'} background_image={'url("/project.svg")'}>
+          <VerticalBar clip_path={'polygon(0% 10%,100% 0, 100% calc(100% - 5vw), 0  100%)'} background_image={'url("/project.svg")'}  OnClick={()=> {router.push("/about")}}>
             <span className={Barstyles.alignUp}>    
               <p className={Barstyles.title}>Project</p>
             </span>

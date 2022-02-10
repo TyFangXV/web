@@ -25,7 +25,7 @@ const Home: NextPage = () => {
 
     setTimeout(() => {
       setLoadingStatus(false);
-    }, 3000);
+    }, 4000);
 
   }, []);
 
