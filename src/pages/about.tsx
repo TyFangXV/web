@@ -70,7 +70,7 @@ const About: NextPage = () => {
         console.log(error);
       }
     })();
-  }, []);
+  });
 
   return (
     <div className={styles.container}>
@@ -92,11 +92,11 @@ const About: NextPage = () => {
               <p>I am Drex, a 16-year-old high school tech enthusiast.</p>
               <hr id={styles.id}/>
               <p>
-                I'm a front-end developer that knows Typescript and has a level of
+                I&apos;m a front-end developer that knows Typescript and has a level of
                 proficiency in Python and C#.
                 <br />
                 <br />
-                I’m keen to learn new things and can work out a solution or fresh
+                I&apos;m keen to learn new things and can work out a solution or fresh
                 concept at any moment
                 <br />
                 <br />
