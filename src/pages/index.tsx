@@ -1,87 +1,111 @@
 /* eslint-disable @next/next/no-img-element */
+import { Octokit } from '@octokit/core';
 import type { NextPage } from 'next';
+import Image from 'next/image';
+import React, { useEffect, useState } from 'react';
+import { FiMenu } from 'react-icons/fi';
+import { useRecoilState } from 'recoil';
 import Name, { Age } from '../components/landing/name';
 import Social from '../components/landing/social';
-import styles from '../styles/Home.module.css';
-import { FiMenu } from 'react-icons/fi';
 import MenuScreen from '../components/menu/menuscreen';
-import React, { useEffect, useState } from 'react';
-import { useRecoilState } from 'recoil';
+import { LanguageCount } from '../state/lang_stats';
 import { isMenuOpen } from '../state/menu';
-import Image from 'next/image'
+import styles from '../styles/Home.module.css';
+import { IlanguageCount } from '../utils/interfere';
 
-
-
+const count = (arr: string[]) => {
+  return arr.reduce(
+    (prev: any, curr) => ((prev[curr] = ++prev[curr] || 1), prev),
+    {}
+  );
+};
 
 const Home: NextPage = () => {
-  const [menuOpen, setMenuOpen] = useRecoilState(isMenuOpen)
+  const [menuOpen, setMenuOpen] = useRecoilState(isMenuOpen);
   const [loading, setLoadingStatus] = useState(true);
-  let [planeCords, setPlaneCords] = useState(0);
-  
 
+  const [languagesCount, setLanguages] = useRecoilState(LanguageCount);
+  const forbidden = ['svelte', 'ejs', 'null'];
+
+  let languages: string[] = [];
+  console.log(languagesCount);
   
-  
+ 
+
   useEffect(() => {
-
+    //preload the site
     setTimeout(() => {
       setLoadingStatus(false);
-    }, 4000);
+    }, 1000);
 
-  }, []);
-
-
+  });
 
   return (
     <>
-      {loading ?  (
+      {loading ? (
         <div className={styles.loading}>
-          <div style={{display : "flex", "justifyContent" : "center", "alignItems" : "center", "height" : "100vh"}}>
-            <Image src="/Ripple.gif" alt="loading" width={"100px"} height={"100px"}/>
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              height: '100vh',
+            }}
+          >
+            <Image
+              src="/Ripple.gif"
+              alt="loading"
+              width={'100px'}
+              height={'100px'}
+            />
           </div>
         </div>
-      ): (
-         <div className={styles.container}>
-         <div hidden={!menuOpen}>
-           <span
-             className={styles.topRight}
-             style={{ marginTop: '2%', marginRight: '1%' }}
-           >
-             <FiMenu
-               className={styles.menu_btn}
-               onClick={() => setMenuOpen(!menuOpen)}
-             />
-           </span>
-           <MenuScreen />
-         </div>
-   
-         <div hidden={menuOpen}>
-           <span
-             className={styles.left}
-             style={{ marginTop: '2%', marginLeft: '1%' }}
-           >
-             <span style={{ textAlign: 'center' }}>
-               <Age />
-             </span>
-           </span>
-           <span className={styles.bottomRight} style={{margin : "0 2w 2vw 0"}}>
-             <Social />
-           </span>
-           <span className={styles.middle}>
-             <Name />
-           </span>
-   
-           <span
-             className={styles.topRight}
-             style={{ marginTop: '2%', marginRight: '1%' }}
-           >
-             <FiMenu
-               className={styles.menu_btn}
-               onClick={() => setMenuOpen(!menuOpen)}
-             />
-           </span>
-         </div>
-       </div>
-      )}    
+      ) : (
+        <div className={styles.container}>
+          <div hidden={!menuOpen}>
+            <span
+              className={styles.topRight}
+              style={{ marginTop: '2%', marginRight: '1%' }}
+            >
+              <FiMenu
+                className={styles.menu_btn}
+                onClick={() => setMenuOpen(!menuOpen)}
+              />
+            </span>
+            <MenuScreen />
+          </div>
+
+          <div hidden={menuOpen}>
+            <span
+              className={styles.left}
+              style={{ marginTop: '2%', marginLeft: '1%' }}
+            >
+              <span style={{ textAlign: 'center' }}>
+                <Age />
+              </span>
+            </span>
+            <span
+              className={styles.bottomRight}
+              style={{ margin: '0 2w 2vw 0' }}
+            >
+              <Social />
+            </span>
+            <span className={styles.middle}>
+              <Name />
+            </span>
+
+            <span
+              className={styles.topRight}
+              style={{ marginTop: '2%', marginRight: '1%' }}
+            >
+              <FiMenu
+                className={styles.menu_btn}
+                onClick={() => setMenuOpen(!menuOpen)}
+              />
+            </span>
+          </div>
+        </div>
+      )}
     </>
   );
 };
