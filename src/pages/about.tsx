@@ -1,77 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
-import { Octokit } from '@octokit/core';
 import { NextPage } from 'next';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import LanguageStats from '../components/about/lang-stats';
 import styles from '../styles/About.module.css';
-import { IlanguageCount, IState } from '../utils/interfere';
 import {SiJavascript, SiTypescript, SiPython, SiRust, SiKotlin, SiCsharp} from 'react-icons/si'
-
-const count = (arr: string[]) => {
-  return arr.reduce(
-    (prev: any, curr) => ((prev[curr] = ++prev[curr] || 1), prev),
-    {}
-  );
-};
-
-
-
-const mockData = [
-  {
-    language: 'JavaScript',
-    count: 5,
-    index: 0,
-  },
-  {
-    language: 'TypeScript',
-    count: 4,
-    index: 1,
-  },
-  {
-    language: 'HTML',
-    count: 3,
-    index: 2,
-  },
-]
-
+import { useRecoilValue } from 'recoil';
+import { LanguageCount } from '../state/lang_stats';
 
 const About: NextPage = () => {
-  let languages: string[] = [];
-  let langauageCount: IlanguageCount[] = [];
-
-  let [statsLoaded, setStatsLoaded] = useState(false);
-
-  useEffect(() => {
-    (async () => {
-      try {
-        //get my github user stats using octokit
-        const octokit = new Octokit();
-        const { data } = await octokit.request('GET /users/tyfangxv/repos');
-
-        //map thourgh the repos and get the amount of times a lang is used
-        data.map((repo: any) => {
-          languages.push(repo.language);
-
-          if (languages.length === data.length) {
-            const stats = count(languages);
-            Object.entries(stats).map(([key, value]: any, index) => {
-              langauageCount.push({
-                language: key,
-                count: value,
-                index: index,
-              });
-            });
-            setStatsLoaded(true);
-
-            console.log(langauageCount);
-          }
-        });
-      } catch (error) {
-        console.log(error);
-      }
-    })();
-  });
-
   return (
     <div className={styles.container}>
       <div style={{ display: 'flex' }}>
@@ -119,9 +55,6 @@ const About: NextPage = () => {
                   <li><SiRust color='#B7410E'/> Rust<span style={{fontStyle : "italic"}}>(Basics)</span></li>
                 </ul>              
             </div>
-
-            <hr className={styles.cutOff}/>
-              <LanguageStats statsLoaded={statsLoaded} LanguageCount={mockData}/>
           </div>
         </div>
       </div>

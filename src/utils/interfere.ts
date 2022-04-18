@@ -5,6 +5,5 @@ export interface IlanguageCount {
   }
   
 export interface IState {
-    statsLoaded  :boolean;
     LanguageCount : IlanguageCount[];
   }

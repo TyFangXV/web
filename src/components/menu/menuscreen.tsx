@@ -95,7 +95,7 @@ const MenuScreen = () => {
       </span>
 
       <span className={styles.alignUp}>
-          <VerticalBar clip_path={'polygon(0% 10%,100% 0, 100% calc(100% - 5vw), 0  100%)'} background_image={'url("/project.svg")'}  OnClick={()=> {router.push("/about")}}>
+          <VerticalBar clip_path={'polygon(0% 10%,100% 0, 100% calc(100% - 5vw), 0  100%)'} background_image={'url("/project.svg")'}  OnClick={()=> {router.push("/project")}}>
             <span className={Barstyles.alignUp}>    
               <p className={Barstyles.title}>Project</p>
             </span>
