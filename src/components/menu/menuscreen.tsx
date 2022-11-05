@@ -13,18 +13,13 @@ import {BsPersonCircle, BsLightbulbFill} from 'react-icons/bs'
 import { useRouter } from 'next/router';
 
 
-const isMobile = () => {
-  if (window.innerWidth < 480) {
-    return true;
-  } else {
-    return false;
-  }
-};
+interface Props {
+  menuOpen:boolean;
+  setMenuOpen: (menuOpen:boolean) => void;
+}
 
 
-
-const MenuScreen = () => {
-  const [menuOpen, setMenuOpen] = useRecoilState(isMenuOpen);
+const MenuScreen:React.FC<Props> = ({menuOpen, setMenuOpen}) => {
   const startAnimationControls = useAnimation();
   const router = useRouter();
 
@@ -64,7 +59,7 @@ const MenuScreen = () => {
 
 
 
-        <VerticalBar clip_path={'polygon(0% 10%,100% 0, 100% calc(100% - 5vw), 0  100%)'} background_image={'url("/contact.svg")'}  OnClick={()=> {router.push("/about")}}>
+        <VerticalBar clip_path={'polygon(0% 10%,100% 0, 100% calc(100% - 5vw), 0  100%)'} background_image={'url("/contact.svg")'}  OnClick={()=> {router.push("/contact")}}>
           <span className={Barstyles.alignUp}>    
             <p className={Barstyles.title}>contact</p>
           </span>

@@ -3,7 +3,6 @@ import { Octokit } from '@octokit/core';
 import type { NextPage } from 'next';
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
-import { FiMenu } from 'react-icons/fi';
 import { useRecoilState } from 'recoil';
 import Name, { Age } from '../components/landing/name';
 import Social from '../components/landing/social';
@@ -62,20 +61,6 @@ const Home: NextPage = () => {
         </div>
       ) : (
         <div className={styles.container}>
-          <div hidden={!menuOpen}>
-            <span
-              className={styles.topRight}
-              style={{ marginTop: '2%', marginRight: '1%' }}
-            >
-              <FiMenu
-                className={styles.menu_btn}
-                onClick={() => setMenuOpen(!menuOpen)}
-              />
-            </span>
-            <MenuScreen />
-          </div>
-
-          <div hidden={menuOpen}>
             <span
               className={styles.left}
               style={{ marginTop: '2%', marginLeft: '1%' }}
@@ -98,13 +83,8 @@ const Home: NextPage = () => {
               className={styles.topRight}
               style={{ marginTop: '2%', marginRight: '1%' }}
             >
-              <FiMenu
-                className={styles.menu_btn}
-                onClick={() => setMenuOpen(!menuOpen)}
-              />
             </span>
           </div>
-        </div>
       )}
     </>
   );
