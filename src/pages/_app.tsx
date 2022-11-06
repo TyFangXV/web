@@ -4,6 +4,7 @@ import { RecoilRoot } from 'recoil';
 import { FiMenu } from 'react-icons/fi';
 import { useState } from 'react';
 import MenuScreen from '../components/menu/menuscreen';
+import Script from 'next/script';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [menuOpen, setMenuOpen] = useState(false);

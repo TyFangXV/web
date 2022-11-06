@@ -1,42 +1,29 @@
 .container{
-
+  min-height: 100vh;
 }
 
 .message{
+    padding-top: 5%;
     color: white;
     text-align: center;
 }
 
-.menu_btn{
-    color: white;
-    font-size: 2.5vw;
-    cursor: pointer;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .middle{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .left{
-    position: absolute;
-    left: 3;
-  }
-  
-  
-  .bottomRight{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-  }
-  
-  .topRight{
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  
+
+.breaker{
+  outline: none;
+  background: none;
+  border: 2.5px solid white;
+  border-radius: 10px;
+  padding: 0;
+  margin: 0;
+  max-width: 10%;
+}
+
+.social{
+  padding-top: 5%;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}

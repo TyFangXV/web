@@ -1,0 +1,66 @@
+.container{
+    background-color: white;
+    width: 250px;
+    border-radius: 10px;
+    height: 39vh;
+}
+
+.logo{
+    margin-right: 9vw;
+}
+
+.section{
+    background-color: #E9E5DF;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.body{
+    background-color: #010409;
+    color: white;
+    min-height: 255px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.pic{
+    margin-top: 1vh;
+    margin-right: 150px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+
+.body h1{
+    margin-top: 1vh;
+    margin-right: 140px;
+    font-size: 1rem;
+}
+
+.body p{
+    font-size: small;
+    text-align: left;
+    margin: 1vh 50px 0vh 25px;
+}
+
+.company{
+    font-weight: bolder;
+}
+
+.button{
+    padding: 7px 20px 7px 20px;
+    margin-top: 2vh;
+    background:none;
+    border: 2px solid #1F6FEB;
+    color: #1F6FEB;
+    border-radius: 25px;
+    font-weight: bold;
+    margin-right: 100px;
+    cursor: pointer;
+}
+
+.button:hover{
+    background-color: #1f71eb25;
+}
