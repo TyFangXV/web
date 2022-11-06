@@ -35,10 +35,10 @@ const About: NextPage = () => {
               <p>I am Drex, a 16-year-old high school tech enthusiast.</p>
               <hr id={styles.id} />
               <p>
-                I work as a full-stack developer. I'm
-                familiar with Typescript. I'm willing to learn new things and
+                I work as a full-stack developer. I&#39;m
+                familiar with Typescript. I&#39;m willing to learn new things and
                 can come up with a solution or a new concept at any time, and
-                I'm excited to be a part of any team, contributing wonderful
+                I&#39;m excited to be a part of any team, contributing wonderful
                 ideas and being skilled at turning a vision into a reality.
                 While soliciting advice from others, I am always eager to assist
                 anyone in need. I organize hackathons and other events to
@@ -48,7 +48,7 @@ const About: NextPage = () => {
                 I am expanding my programming skills by investigating various fields in the IT
                 business, watching classes, and creating projects based on it to
                 understand what I am entering into. When working on a project,
-                my significant interest in "Running a Business" plays a key
+                my significant interest in &apos;&apos;Running a Business&apos;&apos; plays a key
                 role, and I communicate with individuals in that industry to
                 deepen my understanding.
               </p>
