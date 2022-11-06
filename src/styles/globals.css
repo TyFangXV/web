@@ -38,3 +38,21 @@ a {
 * {
   box-sizing: border-box;
 }
+
+
+.menu_btn{
+  color: white;
+  font-size: 2.5vw;
+  cursor: pointer;
+  margin: 2% 0 0 0;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+@media (max-width: 480px) {
+  .menu_btn{
+    font-size: 7vw;
+  }
+}
