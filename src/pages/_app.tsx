@@ -4,7 +4,7 @@ import { RecoilRoot } from 'recoil';
 import { FiMenu } from 'react-icons/fi';
 import { useState } from 'react';
 import MenuScreen from '../components/menu/menuscreen';
-import Script from 'next/script';
+import { Analytics } from '@vercel/analytics/react';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -27,6 +27,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         </div>
         <div hidden={menuOpen}>
           <Component {...pageProps} />
+          <Analytics />
         </div>
       </RecoilRoot>
     );
